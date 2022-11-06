@@ -19,8 +19,8 @@ The Tor network relies on volunteers to donate bandwidth. The more people who ru
 &#xD;
 INSTALLATION:&#xD;
 Create a folder appdata/tor-data/config&#xD;
-Download sample Config: https://github.com/maschhoff/docker/tree/master/tor-relay&#xD;
-Edit the config at least NICKNAME and CONTACTINFO in the config file&#xD;
+Download sample Config: https://github.com/josh-gaby/tor-server/blob/master/torrc&#xD;
+Edit the config as necessary (Configuration details can be found here: https://2019.www.torproject.org/docs/tor-manual.html.en)&#xD;
 Put this into the config folder.&#xD;
 Edit the docker parameters and run it.&#xD;
 &#xD;
