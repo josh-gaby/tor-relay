@@ -6,7 +6,6 @@
   <Network>br0</Network>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://hub.docker.com/r/joshgaby/tor-server/</Support>
   <Project>https://github.com/josh-gaby/tor-server/</Project>
   <Beta>False</Beta>
   <Category>Network:Other Network:Privacy</Category>
