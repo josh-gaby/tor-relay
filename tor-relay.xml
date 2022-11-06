@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>tor-relay</Name>
+  <Repository>joshgaby/tor-server</Repository>
+  <Registry>https://hub.docker.com/r/joshgaby/tor-server/</Registry>
+  <Network>br0</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/joshgaby/tor-server/</Support>
+  <Project>https://github.com/josh-gaby/tor-server/</Project>
+  <Beta>False</Beta>
+  <Category>Network:Other Network:Privacy</Category>
+  <Date>2022-11-06</Date>
+  <Overview>This docker image will install the latest current stable version of Tor server. It will run Tor as an unprivileged regular user, as recommended by torproject.org.&#xD;
+&#xD;
+It includes the latest Tor Debian package from torproject.org which is installed and configured according the Tor project recommendations. Additionally it can be run as a hidden bridge using obfs4proxy&#xD;
+&#xD;
+The Tor network relies on volunteers to donate bandwidth. The more people who run relays, the faster the Tor network will be. If you have at least 2 megabits/s for both upload and download, please help out Tor by configuring your server to be a Tor relay too.&#xD;
+&#xD;
+INSTALLATION:&#xD;
+Create a folder appdata/tor-data/config&#xD;
+Download sample Config: https://github.com/maschhoff/docker/tree/master/tor-relay&#xD;
+Edit the config at least NICKNAME and CONTACTINFO in the config file&#xD;
+Put this into the config folder.&#xD;
+Edit the docker parameters and run it.&#xD;
+&#xD;
+https://hub.docker.com/r/joshgaby/tor-server/</Overview>
+  <Icon>https://clipartart.com/images/tor-browser-icon-clipart-9.png</Icon>
+  <ExtraParams>--init</ExtraParams>
+  <Config Name="CONTACT_EMAIL" Target="CONTACT_EMAIL" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="TOR_NICKNAME" Target="TOR_NICKNAME" Default="Tor4" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="9001" Target="9001" Default="9001" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">9001</Config>
+  <Config Name="9030" Target="9030" Default="9030" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">9030</Config>
+  <Config Name="/etc/tor/" Target="/etc/tor/" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/tor-data/config/</Config>
+  <Config Name="/etc/localtime" Target="/etc/localtime" Default="/etc/localtime" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/etc/localtime</Config>
+</Container>
