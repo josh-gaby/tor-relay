@@ -3,6 +3,7 @@
   <Name>joshgaby-tor-relay</Name>
   <Repository>joshgaby/tor-server</Repository>
   <Registry>https://hub.docker.com/r/joshgaby/tor-server/</Registry>
+  <Support>https://forums.unraid.net/topic/130603-support-joshgaby-tor-relay/</Support>
   <Network>br0</Network>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
