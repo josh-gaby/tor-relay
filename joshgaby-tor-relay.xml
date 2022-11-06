@@ -26,10 +26,10 @@ Edit the docker parameters and run it.&#xD;
 https://hub.docker.com/r/joshgaby/tor-server/</Overview>
   <Icon>https://clipartart.com/images/tor-browser-icon-clipart-9.png</Icon>
   <ExtraParams>--init</ExtraParams>
-  <Config Name="CONTACT_EMAIL" Target="CONTACT_EMAIL" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="TOR_NICKNAME" Target="TOR_NICKNAME" Default="Tor4" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="9001" Target="9001" Default="9001" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">9001</Config>
-  <Config Name="9030" Target="9030" Default="9030" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">9030</Config>
-  <Config Name="/etc/tor/" Target="/etc/tor/" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/tor-data/config/</Config>
-  <Config Name="/etc/localtime" Target="/etc/localtime" Default="/etc/localtime" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/etc/localtime</Config>
+  <Config Name="Server contact email" Target="CONTACT_EMAIL" Default="" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Server nickname" Target="TOR_NICKNAME" Default="Tor4" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Tor OR Port" Target="9001" Default="9001" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">9001</Config>
+  <Config Name="Tor DIR Port" Target="9030" Default="9030" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">9030</Config>
+  <Config Name="Server config directory" Target="/etc/tor/" Default="/mnt/user/appdata/tor-data/config/" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="/etc/localtime" Target="/etc/localtime" Default="/etc/localtime" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false"></Config>
 </Container>
