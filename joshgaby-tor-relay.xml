@@ -18,10 +18,11 @@ It includes the latest Tor Debian package from torproject.org which is installed
 The Tor network relies on volunteers to donate bandwidth. The more people who run relays, the faster the Tor network will be. If you have at least 2 megabits/s for both upload and download, please help out Tor by configuring your server to be a Tor relay too.&#xD;
 &#xD;
 INSTALLATION:&#xD;
-Create a folder appdata/tor-data/config&#xD;
+Create a folder appdata/tor-data/config (used to store the tor config)&#xD;
 Download sample Config: https://github.com/josh-gaby/tor-server/blob/master/torrc&#xD;
 Edit the config as necessary (Configuration details can be found here: https://2019.www.torproject.org/docs/tor-manual.html.en)&#xD;
 Put this into the config folder.&#xD;
+Create a folder appdata/tor-data/data (used to store the tor data between restarts)&#xD;
 Edit the docker parameters and run it.&#xD;
 &#xD;
 https://hub.docker.com/r/joshgaby/tor-server/</Overview>
@@ -32,5 +33,6 @@ https://hub.docker.com/r/joshgaby/tor-server/</Overview>
   <Config Name="Tor OR Port" Target="9001" Default="9001" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">9001</Config>
   <Config Name="Tor DIR Port" Target="9030" Default="9030" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">9030</Config>
   <Config Name="Server config directory" Target="/etc/tor/" Default="/mnt/user/appdata/tor-data/config/" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Server data directory" Target="/var/lib/tor/" Default="/mnt/user/appdata/tor-data/data/" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false"></Config>
   <Config Name="/etc/localtime" Target="/etc/localtime" Default="/etc/localtime" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false"></Config>
 </Container>
